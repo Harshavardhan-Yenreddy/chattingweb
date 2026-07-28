@@ -7,7 +7,8 @@ import { connectDB } from './lib/db.js';
 dotenv.config();
 const app = express();
 const __dirname = path.resolve();
-const Port=process.env.PORT;
+const Port=process.env.PORT||3000;
+app.use(express.json());//request body parsing middleware
 
 app.use("/api/auth",authRoutes);
 app.use("/api/messages",messageRoutes);
