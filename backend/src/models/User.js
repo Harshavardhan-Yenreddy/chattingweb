@@ -5,7 +5,7 @@ email:{
     required:true,
     unique:true,
 },
-fullname:{
+fullName:{
     type:String,
     required:true,
 },
